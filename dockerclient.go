@@ -435,7 +435,7 @@ func (client *DockerClient) UnpauseContainer(id string) error {
 	return nil
 }
 
-func (client *DockerClient) Exec(config *ExecConfig) (string, error) {
+func (client *DockerClient) Exec(config *ExecConfig) ([]byte, error) {
 	data, err := json.Marshal(config)
 	if err != nil {
 		return "", err
