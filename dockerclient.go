@@ -456,7 +456,7 @@ func (client *DockerClient) Exec(config *ExecConfig) (string, error) {
 	if err != nil {
 		return "", err
 	}
-	return createExecResp.Id, nil
+	return resp, nil
 }
 
 func (client *DockerClient) RenameContainer(oldName string, newName string) error {
